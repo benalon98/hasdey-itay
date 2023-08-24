@@ -1,7 +1,6 @@
 // import images
 import Logo from "./img/header/logoHasdey.png";
 
-import QuoteImg from "./img/testimonial/quote.svg";
 // import icons
 import { GrFacebookOption } from "react-icons/gr";
 import { IoMdArrowBack,IoMdArrowForward} from "react-icons/io";
@@ -84,7 +83,6 @@ export const interviewData = {
 // TESTIMONIAL SECTION
 export const testimonialData = [
   {
-    quoteImg: QuoteImg,
     message:
       `וכל העושה צדקה ומשפט כאילו מילא כל העולם כולו חסד, שנאמר (תהילים ל"ג, ה') אהב צדקה ומשפט, חסד ה' מלאה הארץ`,
     name: "רבי אלעזר",
