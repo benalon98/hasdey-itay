@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import { motion } from "framer-motion";
 // import variants
 import { fadeIn } from "../variants";
-import quoteImg from '/Users/benargaman/Downloads/NextJS-Tailwind-Responsive-main/img/testimonial/quote.svg'
 import Image from "next/image";
 export const Testimonial = () => {
   return (
@@ -31,7 +30,7 @@ export const Testimonial = () => {
                 <div className="max-w-[1200px] mx-auto flex flex-col items-center lg:flex-row lg:items-start gap-x-[38px]">
                   <div className="w-[154px] h-[109px] mb-5">
                   <Image
-        src={quoteImg}
+        src={"/quote.svg"}
         alt='/'
         width={100}
         height={100}
