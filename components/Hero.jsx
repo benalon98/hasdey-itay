@@ -17,7 +17,7 @@ const Hero = ({heading, message}) => {
   return (
 <section className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
     <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-        <video className="min-w-full min-h-full absolute object-cover"  src="/videoBg.mp4" type="video/mp4" autoPlay muted loop></video>
+        <video className="min-w-full min-h-full absolute object-cover"  src="https://firebasestorage.googleapis.com/v0/b/appointme-33346.appspot.com/o/Stories%2FvideoBg.mp4?alt=media&token=5b6c78f3-2b0e-4c43-b0fe-c98c1bd0ea24" type="video/mp4" autoPlay muted loop></video>
     </div>
     <motion.div
         variants={container}
