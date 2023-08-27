@@ -26,7 +26,7 @@ const About = () => {
             variants={fadeIn("left")}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="flex-1 h-full xl:mt-48 " 
           >
             <div className="flex flex-col items-end">
