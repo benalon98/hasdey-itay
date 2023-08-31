@@ -61,8 +61,8 @@ const Skills = ({donations}) => {
 
   return (
     <>
-    <div classNameName="bg-black p-4 rounded-full w-1/2 mx-auto shadow-xl">      
-    <h5 classNameName="text-center text-white  lg:text-6xl">התרומות האחרונות</h5>
+    <div className="bg-black p-4 rounded-full w-1/2 mx-auto shadow-xl">      
+    <h5 className="text-center text-white  lg:text-6xl">התרומות האחרונות</h5>
 </div>
       <div className="container my-12 mx-auto px-4 md:px-12">
     <div className="flex flex-wrap space-y-6 -mx-1 lg:-mx-4">
@@ -80,8 +80,8 @@ const Skills = ({donations}) => {
   
   
     </header>
-    <div classNameName="flex justify-center items-center">
-<span classNameName="lg:text-4xl ">₪{donation.Amount}
+    <div className="flex justify-center items-center">
+<span className="lg:text-4xl ">₪{donation.Amount}
 </span></div>
     <footer className="flex items-center text-center justify-center leading-none h-20 p-2 md:p-6">
       
@@ -108,13 +108,13 @@ const Skills = ({donations}) => {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.1 }}
       ref={ref}
-      classNameName="section font-primary"
+      className="section font-primary"
     >
 
 
-      <div classNameName="container mx-auto">
-        <div classNameName="flex flex-col xl:flex-row justify-between items-center gap-y-12">
-          <div classNameName="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-y-12">
+          <div className="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
             <CircularProgressbar
               strokeWidth={1}
               styles={styles}
@@ -122,11 +122,11 @@ const Skills = ({donations}) => {
               maxValue={500}
               text={`${fullBody}+`}
             />
-            <div classNameName="uppercase font-light tracking-[1.2px] text-center">
+            <div className="uppercase font-light tracking-[1.2px] text-center">
               מנות בכל יום
             </div>
           </div>
-          <div classNameName="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
+          <div className="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
             <CircularProgressbar
               styles={styles}
               strokeWidth={1}
@@ -134,11 +134,11 @@ const Skills = ({donations}) => {
               value={piercing}
               text={`${piercing}`}
             />
-            <div classNameName="uppercase font-light tracking-[1.2px] text-center">
+            <div className="uppercase font-light tracking-[1.2px] text-center">
               ימים בשבוע
             </div>
           </div>
-          <div classNameName="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
+          <div className="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
             <CircularProgressbar
               styles={styles}
               strokeWidth={1}
@@ -146,18 +146,18 @@ const Skills = ({donations}) => {
               maxValue={60000}
               text={`${fullColor}+`}
             />
-            <div classNameName="uppercase font-light tracking-[1.2px] text-center">
+            <div className="uppercase font-light tracking-[1.2px] text-center">
               מנות בשנה
             </div>
           </div>
-          <div classNameName="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
+          <div className="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
             <CircularProgressbar
               styles={styles}
               strokeWidth={1}
               value={temporary}
               text={`${temporary}%`}
             />
-            <div classNameName="uppercase font-light tracking-[1.2px] text-center">
+            <div className="uppercase font-light tracking-[1.2px] text-center">
               חסד ואהבת ישראל
             </div>
           </div>
