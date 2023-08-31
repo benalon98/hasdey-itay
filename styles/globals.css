@@ -9,7 +9,7 @@
   body {
     @apply font-secondary text-lg text-dark  bg-[#fafafa];
     direction: rtl;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Heebo', sans-serif !important;
     overflow-x: hidden;
 
 

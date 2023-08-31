@@ -8,8 +8,31 @@ import Skills from '../components/Skills';
 import Testimonial from '../components/Testimonial';
 import Footer from '../components/Footer';
 import Copyright from '../components/Copyright';
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 export default function Home() {
+  const [donations,setDontations] = useState([])
+  async function fetchDonations() {
+    try {
+      const response = await axios.get('https://matara.pro/nedarimplus/Reports/Manage3.aspx?Action=GetHistoryJson&MosadId=7002417&ApiPassword=iy321&LastId=28337101&MaxId=16');
+      console.log('====================================');
+      console.log(response.data);
+      console.log('====================================');
+      setDontations(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  useEffect(() => {
+    // Initial fetch when component mounts
+    fetchDonations();
+
+    // Schedule subsequent fetches every hour
+    const interval = setInterval(fetchDonations, 60 * 60 * 1000); // 1 hour in milliseconds
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className='max-w-[1920px] mx-auto overflow-hidden bg-white'>
       <Head>
@@ -31,7 +54,7 @@ export default function Home() {
       <Hero heading='חסדי איתי' message='ארוחות חמות מידי יום לנזקקים וקשי יכולת' />
       <Slider slides={SliderData} />
       <Instagram />
-      <Skills/>
+      <Skills donations={donations}/>
       <Testimonial/>
       <Interview/>
       <Footer/>

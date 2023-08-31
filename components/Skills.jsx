@@ -9,8 +9,9 @@ import "react-circular-progressbar/dist/styles.css";
 import { motion } from "framer-motion";
 // import variants
 import { fadeIn } from "../variants";
+const Skills = ({donations}) => {
 
-const Skills = () => {
+
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
@@ -59,6 +60,48 @@ const Skills = () => {
   };
 
   return (
+    <>
+    <div className="bg-black p-4 rounded-full w-1/2 mx-auto shadow-xl">      
+    <h5 className="text-center text-white  lg:text-6xl">התרומות האחרונות</h5>
+</div>
+      <div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap space-y-6 -mx-1 lg:-mx-4">
+
+{donations.map((donation)=> <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
+
+<article class="overflow-hidden rounded-2xl shadow-lg">
+
+  
+
+    <header class="flex items-center justify-center leading-tight px-2 md:p-6">
+        <h1 class="text-xl font-black">
+                {donation.ClientName}
+        </h1>
+  
+  
+    </header>
+    <div className="flex justify-center items-center">
+<span className="lg:text-4xl ">₪{donation.Amount}
+</span></div>
+    <footer class="flex items-center text-center justify-center leading-none h-20 p-2 md:p-6">
+      
+            <p class="ml-2 text-sm text-gray-400">
+            {donation.Comments}
+
+            </p>
+     
+    
+    </footer>
+
+</article>
+
+</div>)}
+        
+
+      
+        
+    </div>
+</div>
     <motion.section
       variants={fadeIn("up")}
       initial="hidden"
@@ -67,6 +110,8 @@ const Skills = () => {
       ref={ref}
       className="section font-primary"
     >
+
+
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row justify-between items-center gap-y-12">
           <div className="w-[150px] lg:w-[275px] flex flex-col justify-center items-center gap-y-6">
@@ -119,6 +164,7 @@ const Skills = () => {
         </div>
       </div>
     </motion.section>
+    </>
   );
 };
 
