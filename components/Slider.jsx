@@ -23,7 +23,6 @@ const About = () => {
             <iframe
               className="rounded-2xl shadow-sm"
               src="https://direct.tranzila.com/ohelb/iframe.php?lang=il"
-              frameborder="0"
               width={"100%"}
               height={"600px"}
             ></iframe>
